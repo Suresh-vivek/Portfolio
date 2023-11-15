@@ -25,25 +25,28 @@ const Contact = () => {
   const handleBlur = () => {
     setCurrentAnimations("idle");
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setCurrentAnimations("hit");
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Vivek",
-          from_email: form.email,
-          to_email: "svivek.kumar012@gmail.com",
-          message: form.message,
+    try {
+      // Your Formspree endpoint
+      const formspreeEndpoint = "https://formspree.io/f/mgejbkqr";
+
+      // Create form data
+      const formData = new FormData(formRef.current);
+
+      // Make a POST request to Formspree
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
+      });
+
+      if (response.ok) {
         setIsLoading(false);
         showAlert({
           show: true,
@@ -55,18 +58,20 @@ const Contact = () => {
           hideAlert();
           setCurrentAnimations("idle");
           setForm({ name: "", email: "", message: "" });
-        }, [4000]);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        setCurrentAnimations("idle");
-        console.log(error);
-        showAlert({
-          show: true,
-          text: "I didn't receive your message",
-          type: "danger",
-        });
+        }, 4000);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      setIsLoading(false);
+      setCurrentAnimations("idle");
+      console.error(error);
+      showAlert({
+        show: true,
+        text: "I didn't receive your message",
+        type: "danger",
       });
+    }
   };
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
@@ -75,6 +80,7 @@ const Contact = () => {
         <h1 className="head-text">Get in Touch</h1>
 
         <form
+          ref={formRef}
           className="w-full flex flex-col gap-7 mt-14"
           onSubmit={handleSubmit}
         >
