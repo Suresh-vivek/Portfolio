@@ -1,7 +1,7 @@
 import {skills , experiences} from "../constants";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
+import CTA from "../components/CTA";
 const About = () => {
   return (
     <section className="max-container">
@@ -99,6 +99,8 @@ const About = () => {
         </div>
 
         </div>
+        <hr className="border-slate-200"/>
+        <CTA/>
     </section>
   )
 }

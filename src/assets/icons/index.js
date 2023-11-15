@@ -30,8 +30,13 @@ import cplus from "./cplus.svg";
 import python from "./python.svg";
 import figma from "./figma.svg";
 import three from "./three.svg";
-
+import instagram from "./Instagram.svg";
+import bloodlink from "./bloodlink.svg";
+import socio from "./socio.svg";
+import spoti from "./spoti.svg";
+import sudoku from "./sudoku.svg";
 export {
+  bloodlink,
   cplus,
   css,
   express,
@@ -39,6 +44,7 @@ export {
   git,
   github,
   html,
+  instagram,
   javascript,
   mongodb,
   motion,
@@ -57,6 +63,9 @@ export {
   pricewise,
   python,
   snapgram,
+  socio,
+  spoti,
+  sudoku,
   summiz,
   threads,
   three,
