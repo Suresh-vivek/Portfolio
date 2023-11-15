@@ -55,7 +55,7 @@ const Contact = () => {
           hideAlert();
           setCurrentAnimations("idle");
           setForm({ name: "", email: "", message: "" });
-        }, [3000]);
+        }, [4000]);
       })
       .catch((error) => {
         setIsLoading(false);
