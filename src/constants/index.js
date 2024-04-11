@@ -7,6 +7,7 @@ import {
   ucc,
   college,
   animo,
+  postman,
 } from "../assets/images";
 import {
   bloodlink,
@@ -45,6 +46,11 @@ import {
 } from "../assets/icons";
 
 export const skills = [
+  {
+    imageUrl: postman,
+    name: "postman",
+    type: "Programming Language",
+  },
   {
     imageUrl: cplus,
     name: "c++",

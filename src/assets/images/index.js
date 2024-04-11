@@ -8,6 +8,7 @@ import ucc from "./ucc.png";
 import college from "./college.png";
 import safenet from "./safenet .png";
 import animo from "./animo.png";
+import postman from "./postman.png";
 
 export {
   hero,
@@ -20,4 +21,5 @@ export {
   college,
   safenet,
   animo,
+  postman,
 };

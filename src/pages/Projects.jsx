@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import CTA from "../components/CTA";
 import { projects } from "../constants";
 import { arrow } from "../assets/icons";
+import resume from "./Vivek_Resume.pdf";
 
 const Projects = () => {
+  const resumeUrl = resume;
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -59,6 +61,12 @@ const Projects = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div>
+        <a href={resumeUrl} download="Vivek_resume.pdf" className="btn">
+          <button>Download Resume</button>
+        </a>
       </div>
 
       <hr className="border-slate-200" />
