@@ -3,8 +3,10 @@ import {
   shopify,
   starbucks,
   tesla,
+  safenet,
   ucc,
   college,
+  animo,
 } from "../assets/images";
 import {
   bloodlink,
@@ -199,6 +201,22 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: safenet,
+    theme: "btn-back-blue",
+    name: "Safenet",
+    description:
+      "Created a full-stack application that helps in Detecting and Mitigating Online Frauds. Presented Safenet in Rajasthan Police Hackathon 1.0",
+    link: "https://github.com/Suresh-vivek/RJPOLICE_HACK_533_ByteBuddies_5",
+  },
+  {
+    iconUrl: bloodlink,
+    theme: "btn-back-red",
+    name: "BloodLink",
+    description:
+      "Created a full-stack application that help blood seekers to find blood donors in shortest time possible , shows live availability of blood in blood banks and has a community section that motivates people to donate blood.",
+    link: "https://github.com/Suresh-vivek/BloodLink",
+  },
+  {
     iconUrl: socio,
     theme: "btn-back-green",
     name: "Socio",
@@ -207,12 +225,12 @@ export const projects = [
     link: "https://github.com/Suresh-vivek/Socio/tree/master",
   },
   {
-    iconUrl: bloodlink,
-    theme: "btn-back-red",
-    name: "BloodLink",
+    iconUrl: animo,
+    theme: "btn-back-blue",
+    name: "Animo",
     description:
-      'Created a full-stack application that help blood seekers to find blood donors in shortest time possible , shows live availability of blood in blood banks and has a community section that motivates people to donate blood.',
-    link: "https://github.com/Suresh-vivek/BloodLink",
+      "A MERN based web application on which you can watch latest anime and also has a  anime recomendation ML model , that recommends anime based on your interest. ",
+    link: "https://github.com/ArnavJyo/Animo",
   },
   {
     iconUrl: spoti,
@@ -223,14 +241,6 @@ export const projects = [
     link: "https://github.com/Suresh-vivek/Spotify_clone",
   },
 
-  {
-    iconUrl: sudoku,
-    theme: "btn-back-black",
-    name: "Sudoku Solver",
-    description:
-      "Developed a Sudoku game solver using backtracking algorithm and GUI using pygame.",
-    link: "https://github.com/Suresh-vivek/Sudoku_Solver",
-  },
   {
     iconUrl: python,
     theme: "btn-back-yellow",
